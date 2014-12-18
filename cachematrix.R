@@ -43,3 +43,12 @@ cacheSolve <- function(x, ...) { # The input of x is created by makeCacheMatrix
         s              # Return matrix inverse to the code that called function
         
 }
+
+## As a check, performed the following:
+## u<-matrix(c(-1,-2,1,1), 2, 2) # create matrix u
+## a<-makeCacheMatrix(u)         # assign makeCacheMatrix(u) to a
+## cacheSolve(a)                 # execute cacheSolve(a) to get inverse of u
+
+## When the last step is performed the first time, the inverse of u is returned
+## When called again, the message of 'getting cached data' appears and then
+## inverse of u is provided, as its cached value was retrieved
